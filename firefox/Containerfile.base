@@ -1,4 +1,5 @@
 FROM registry.opensuse.org/opensuse/tumbleweed:latest
+RUN ["/usr/bin/zypper", "ref"]
 RUN ["/usr/bin/zypper", "dup", "-y"]
 RUN ["/usr/bin/zypper", "in", "-y", "firefox", "shadow", "libcanberra-gtk3-module"]
 RUN ["/usr/bin/zypper", "in", "-y", "-t", "pattern", "fonts"]
